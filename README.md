@@ -38,23 +38,13 @@ Coflex is designed with high extensibility, supporting diverse NAS benchmarks ac
 
 
 ### ◼️ Dimension Decomposition
-In hardware-aware neural architecture search (HW-NAS), the joint design space of software architectures and hardware configurations can be extremely large—often involving more than 10¹⁹ possible combinations. This imposes severe scalability challenges for traditional multi-objective Bayesian optimization (MOBO) methods, especially when relying on standard Gaussian Processes (GPs) as surrogates.
+Coflex tackles the scalability bottlenecks in hardware-aware NAS by introducing a two-level sparse Gaussian process (SGP) framework:
 
-Standard GPs require maintaining and inverting a full covariance matrix in each iteration. As the number of observed configurations grows, this leads to:
+🔹 Per-objective SGPs reduce complexity by modeling each optimization objective separately.
 
-- 🧮 **Cubic computational complexity** (`O(n^3)`)
-- ⚠️ **Numerical instability** due to ill-conditioned kernels
-- 🌀 **Over-smoothing effects**, where the GP fails to capture fine-grained structure in high-dimensional spaces
+🔹 Pareto-based fusion combines these models using non-dominance filtering to preserve multi-objective structure.
 
-To address these limitations, **Coflex introduces a hierarchical surrogate modeling strategy**:
-
-1. **Objective-wise Decomposition**  
-   The multi-objective optimization problem is decomposed into independent single-objective sub-problems. Each objective (e.g., error rate, energy-delay product) is modeled using a separate Sparse Gaussian Process (SGP), significantly reducing the number of data points per GP and improving both computational and modeling efficiency.
-
-2. **Pareto-based Fusion**  
-   A second-level unified GP model aggregates the outputs from individual objectives via **non-dominance filtering**. This retains the essence of multi-objective optimization, while avoiding collapse into a scalarized single-objective surrogate.
-
-This two-tier SGP framework allows Coflex to scale effectively in large design spaces while preserving the fidelity of trade-off modeling between software and hardware metrics. It forms the core of Coflex's ability to push the Pareto frontier toward globally optimal configurations in realistic HW-NAS scenarios.
+This design enables Coflex to efficiently explore massive software-hardware search spaces (10¹⁹+ configs) while maintaining high-fidelity trade-off modeling.
 
 <p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_dimension_decomposation.png"></p>
 
