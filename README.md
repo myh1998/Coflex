@@ -1,8 +1,45 @@
-# Coflex
-To run the code, please download [`COFleX_ho_5.zip`](https://sutdapac-my.sharepoint.com/:u:/g/personal/yinhui_ma_mymail_sutd_edu_sg/ERCSf7Dr0cxEkxaTk9g4mIgB2RjGA_DNLkkcsfRNVPTjWA?e=mZjcyM)
+# LAXOR: A BNN Accelerator with Latch-XOR Logic for Local Computing
 
-You can modify the project run parameters in `run_sss.py`. The default experiment run is set to NSGA with `popsize=100` and `gen=100`. For the NSGA `gen`, you can modify it in `termination=('n_gen', 100)`. Before running, you need to modify the `benchmark_root` to your absolute path in `COFleX_ho_5/Simulator/FRCN_Simulator.py` and `COFleX_ho_5/COFleX_Analysis/RBFleX/imageNet_SSS/Check_acc.py`.
+## 🟨 Contents
+- [Introduction](https://github.com/tomomasayamasaki/LAXOR#-introduction)
+    - [LAXOR Accelerator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator)
+    - [LAXOR Accelerator Simulator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator-simulator)
+- [Repogitory File Structure](https://github.com/tomomasayamasaki/LAXOR#-repository-file-structure)
+    - [LAXOR_Sim](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor_sim)
+    - [Program and pre-trained model for test running](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-program-and-pre-trained-model-for-test-running)
+- [Installation Requirements](https://github.com/tomomasayamasaki/LAXOR#-installation-requirements)
+- [How to Run](https://github.com/tomomasayamasaki/LAXOR#-how-to-run)
+    - [Areca platform](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-areca-platform)
+    - [Load pre-trained model](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-load-pre-trained-model)
+    - [Config](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-config)
+    - [Run Example](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-run-example)
+- [Citing LAXOR accelerator and simulator](https://github.com/tomomasayamasaki/LAXOR#-citing-laxor-accelerator-and-simulator)
+- [Licence](https://github.com/tomomasayamasaki/LAXOR#-licence)
 
-The program supports using Bayesian optimization and NSGA for DeFiNES (which includes energy and latency analysis for various layer types) & Scalesim. Due to runtime constraints, it currently supports running on the Cifar100 dataset. To check the results, you can view the top 5 hardware and software configurations in the command line after the program has successfully completed. Additionally, you can find the corresponding results for DeFiNES and Scalesim in the `COFleX_result` directory.
+## 🟨 Introduction
+### ◼️ Coflex optimizer framework
+Coflex is a hardware-aware neural architecture search (HW-NAS) optimizer that jointly considers key parameters from the software-side neural network architecture and corresponding hardware design configurations. It operates through an iterative co-optimization framework consisting of a multi-objective Bayesian optimizer (front-end) and a performance evaluator (back-end).
 
-When you want to run Extra hardware optimization or Extra software optimization, you can modify the `-opt_mode` parameter in `run_sss.py`. At this point, the `-fs` option will take effect, allowing you to provide the hardware and software configuration you wish to fix.
+In each optimization iteration, Coflex takes candidate configurations as input, evaluates their actual performance trade-offs between software accuracy (e.g., error rate) and hardware efficiency (e.g., energy-delay product), and updates the surrogate models in the Bayesian optimizer accordingly. This process enables Coflex to progressively refine the Pareto front toward a designated reference point (e.g., (0,0)) in the objective space, effectively navigating the inherent conflict between software and hardware objectives.
+
+After multiple iterations, Coflex converges to a near-globally optimal Pareto front, where each point represents a non-dominated configuration offering an optimal trade-off between software performance and hardware cost. The final output provides interpretable architectural design recommendations for both neural network developers and hardware architects, along with the expected performance metrics of each configuration. As a result, Coflex delivers an automated, end-to-end software-hardware co-design pipeline.
+
+<p align="center"><img width=60% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR_Core.png"></p>
+
+### ◼️ Search Space Define
+#### xxx_xxx
+
+### ◼️ Total Hyper-parameters for different NAS-Benchmark suites
+#### xxx_xxx
+
+### ◼️ Dimension Decomposition
+#### xxx_xxx
+
+### ◼️ Sparse Gaussian inducing strategies
+#### xxx_xxx
+
+## 🟨 Repository File Structure
+
+## 🟨 Installation Requirements
+
+## 🟨 How to Run
