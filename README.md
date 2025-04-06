@@ -56,7 +56,7 @@ To address these limitations, **Coflex introduces a hierarchical surrogate model
 
 This two-tier SGP framework allows Coflex to scale effectively in large design spaces while preserving the fidelity of trade-off modeling between software and hardware metrics. It forms the core of Coflex's ability to push the Pareto frontier toward globally optimal configurations in realistic HW-NAS scenarios.
 
-<p align="center"><img width=30% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_dimension_decomposation.png"></p>
+<p align="center"><img width=100% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_dimension_decomposation.png"></p>
 
 ### ◼️ Sparse Gaussian inducing strategies
 #### 
