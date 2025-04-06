@@ -1,4 +1,4 @@
-# LAXOR: A BNN Accelerator with Latch-XOR Logic for Local Computing
+# Coflex: Enhancing HW-NAS with Sparse Gaussian Processes for Efficient and Scalable Software-Hardware Co-Design
 
 ## 🟨 Contents
 xxx_xxx
@@ -16,7 +16,15 @@ After multiple iterations, Coflex converges to a near-globally optimal Pareto fr
 ### ◼️ Search Space Define
 The search space of HW-NAS encompasses a high-dimensional hyperparameter space composed of both software-wise parameters (e.g., neural network architectural choices) and hardware-wise parameters (e.g., hardware resource configurations). To initialize the optimization process, Coflex performs uniform sampling across all dimensions of this joint search space. These sampled configurations are then used to construct the initial Gaussian surrogate models within the multi-objective Bayesian optimization front-end.
 
+<p align="center"><img width=30% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_search_space.png"></p>
+
 ### ◼️ Total Hyper-parameters for different NAS-Benchmark suites
+This work leverages multiple standardized NAS benchmark suites to provide consistent neural architecture input representations for the Coflex optimizer. These benchmarks serve as the input source for both software and hardware configuration spaces.
+
+If you wish to run Coflex on a specific NAS benchmark, please refer to the table below for the corresponding repository links. Make sure to download and store the datasets according to the instructions provided in the [How to Run](https://github.com/myh1998/Coflex/edit/main/README.md#-how-to-run) section.
+
+Coflex is designed with high extensibility, supporting diverse NAS benchmarks across various tasks. If you intend to apply Coflex to a new benchmark not covered in this work, you may edit the internal data mapping logic in the Software Performance Evaluator and Hardware Performance Evaluator (DeFiNES) modules to ensure compatibility with the new input/output format.
+
 > **Note**:  
 > - **Hw space** = Hardware search space size  
 > - **Sw space** = Software search space size  
