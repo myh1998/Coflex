@@ -21,7 +21,7 @@ The search space of HW-NAS encompasses a high-dimensional hyperparameter space c
 ### ◼️ Total Hyper-parameters for different NAS-Benchmark suites
 This work leverages multiple standardized NAS benchmark suites to provide consistent neural architecture input representations for the Coflex optimizer. These benchmarks serve as the input source for both software and hardware configuration spaces.
 
-If you wish to run Coflex on a specific NAS benchmark, please refer to the table below for the corresponding repository links. Make sure to download and store the datasets according to the instructions provided in the [How to Run](https://github.com/myh1998/Coflex/edit/main/README.md#-how-to-run) section.
+If you wish to run Coflex on a specific NAS benchmark, please refer to the table below for the corresponding repository links. Make sure to download and store the datasets according to the instructions provided in the [How to Run](https://github.com/myh1998/Coflex/blob/main/README.md#-how-to-run) section.
 
 Coflex is designed with high extensibility, supporting diverse NAS benchmarks across various tasks. If you intend to apply Coflex to a new benchmark not covered in this work, you may edit the internal data mapping logic in the Software Performance Evaluator and Hardware Performance Evaluator (DeFiNES) modules to ensure compatibility with the new input/output format.
 
