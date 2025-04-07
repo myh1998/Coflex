@@ -74,9 +74,36 @@ pip install -r requirements.txt
 
 ## 🟨 How to Run
 ### ◼️ Preprocessing for Reproduction
-xxx_xxx
+Please follow the steps below to correctly set up the working environment for reproducing the experimental results of COFleX:
+
+🔹Set the Working Directory
+  Choose 
+  ```python
+  COFleX/
+  ```
+  as the root working directory.
+
+🔹Unpack Required Archives
+  ```python
+  unzip COFleX_Analysis.zip -d COFleX/
+
+  unzip design_space.zip -d COFleX/
+  ```
+🔹Prepare Dataset
+  Download the ImageNet val dataset and place it into the following directory:
+  ```python
+  COFleX/dataset/
+  ```
+🔹Install Required Simulators
+  Download and place the DeFiNES & Scale-Sim into the specified directory:
+  ```python
+  COFleX/Simulator/
+  ```
+  Please ensure all environment variables and simulator dependencies are properly configured as described in each simulator's official documentation.
 
 ### ◼️ Run Examples
-xxx_xxx
+```python
+python run_sss.py
+```
 
 
