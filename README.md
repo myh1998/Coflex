@@ -52,6 +52,8 @@ This design enables Coflex to efficiently explore massive software-hardware sear
 To handle the scalability bottlenecks of standard Gaussian Processes in large-scale HW-NAS tasks, Coflex adopts sparse GP modeling with inducing points. Instead of maintaining a full covariance matrix, Coflex approximates it using a low-rank structure derived from a small set of representative inducing inputs. This significantly reduces computational cost and improves stability, enabling fast and reliable optimization over high-dimensional software-hardware design spaces.
 
 ## 🟨 Repository File Structure
+### ◼️ Multiple Bayesian Optimizer(Front-end)
+🔹 
 
 ## 🟨 Installation Requirements
 
