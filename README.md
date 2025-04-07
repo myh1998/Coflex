@@ -101,7 +101,10 @@ Please follow the steps below to correctly set up the working environment for re
   ```
   Please ensure all environment variables and simulator dependencies are properly configured as described in each simulator's official documentation.
 
-### ◼️ Run Examples
+### ◼️ Reproduce the results in workload1
+
+<p align="center"><img width=100% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_search_space.png"></p>
+
 ```python
 python run_sss.py
 ```
