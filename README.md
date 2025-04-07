@@ -60,7 +60,7 @@ To handle the scalability bottlenecks of standard Gaussian Processes in large-sc
 🔹[RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
 
 #### ⚙️ Hardware Evaluator
-Please download the hardware deployment analyzer from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#-how-to-run) section to correctly install it for reproducing the results presented in the paper.
+Please download the hardware deployment analyzer from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
 
 🔹[DeFiNES](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
 
@@ -73,10 +73,10 @@ pip install -r requirements.txt
 [Requirements](https://github.com/myh1998/Coflex/blob/main/requirements.txt)
 
 ## 🟨 How to Run
-### Preprocessing for Reproduction
+### ◼️ Preprocessing for Reproduction
 xxx_xxx
 
-### Run Examples
+### ◼️ Run Examples
 xxx_xxx
 
 
