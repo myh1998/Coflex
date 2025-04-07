@@ -53,8 +53,28 @@ To handle the scalability bottlenecks of standard Gaussian Processes in large-sc
 
 ## 🟨 Repository File Structure
 ### ◼️ Multiple Bayesian Optimizer(Front-end)
-🔹 
+🔹 [FRCN_Simulator](https://github.com/myh1998/Coflex/blob/main/Simulator/FRCN_Simulator.py)
+
+### ◼️ Performance Evaluator(Back-end)
+#### 🧠 Network Evaluator
+🔹[RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
+
+#### ⚙️ Hardware Evaluator
+🔹[DeFiNES] - Placeholder for download link of DeFiNES
+
+🔹[Scale-Sim] - Placeholder for download link of Scale-Sim
 
 ## 🟨 Installation Requirements
+```python
+pip install -r requirements.txt
+```
+[Requirements](https://github.com/myh1998/Coflex/blob/main/requirements.txt)
 
 ## 🟨 How to Run
+### Preprocessing for Reproduction
+xxx_xxx
+
+### Run Examples
+xxx_xxx
+
+
