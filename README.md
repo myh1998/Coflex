@@ -60,9 +60,11 @@ To handle the scalability bottlenecks of standard Gaussian Processes in large-sc
 🔹[RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
 
 #### ⚙️ Hardware Evaluator
-🔹[DeFiNES] - Placeholder for download link of DeFiNES
+Please download the hardware deployment analyzer from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#-how-to-run) section to correctly install it for reproducing the results presented in the paper.
 
-🔹[Scale-Sim] - Placeholder for download link of Scale-Sim
+🔹[DeFiNES](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
+
+🔹[Scale-Sim](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EtNUdprB7QVEvcZk54zrEXMBN0tAR-iSGE1J-f0utFUxVw?e=GsgJ7s)
 
 ## 🟨 Installation Requirements
 ```python
