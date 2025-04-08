@@ -90,7 +90,7 @@ This project supports two types of hardware deployment evaluators: `DeFiNES` and
 #  Energy prediction error: within 6%
 # Use case: Ideal for precise, end-stage performance estimation and final candidate ranking.
 ```
-Please download the hardware deployment evaluator from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
+Please download the hardware deployment evaluator from the following link and follow the instructions in [`Preprocessing for Reproduction`](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
 
 🔹Download Link: [`DeFiNES`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
 
@@ -129,8 +129,8 @@ Please follow the steps below to correctly set up the working environment for re
 
 🔹Prepare Dataset
   Download the ImageNet/val dataset and place it into the following directory:
-  > The CIFAR-10 and CIFAR-100 datasets will be **automatically downloaded** by the program into `COFleX/dataset/`.  
-  > The **ImageNet/val** subset must be **manually downloaded** or obtained via the command line if a valid URL is available:
+  > The `CIFAR-10` and `CIFAR-100` datasets will be **automatically downloaded** by the program into `COFleX/dataset/`.  
+  > The `ImageNet/val` subset must be **manually downloaded** or obtained via the command line if a valid URL is available:
   >
   ```bash
    wget "https://your-server.com/path-to/imagenet_val.zip" -O imagenet_val.zip
