@@ -118,6 +118,15 @@ Please follow the steps below to correctly set up the working environment for re
   unzip COFleX_Analysis.zip -d COFleX/
   unzip design_space.zip -d COFleX/
   ```
+
+🔹Download & Unzip NAS-Benchmark
+  > The Coflex framework supports multiple NAS benchmarks. Please use the corresponding download links as needed.
+  
+  > For NATS-Bench-SSS, Download Link: [NATS-sss-v1_0-50262-simple](https://onedrive.live.com/?authkey=%21AKSvuIkSXx0UQaI&id=8305A36BB9DB1CA9%21127&cid=8305A36BB9DB1CA9)
+  ```bash
+  unzip NATS-sss-v1_0-50262-simple.zip -d COFleX/
+  ```
+
 🔹Prepare Dataset
   Download the ImageNet/val dataset and place it into the following directory:
   > The CIFAR-10 and CIFAR-100 datasets will be **automatically downloaded** by the program into `COFleX/dataset/`.  
@@ -138,12 +147,47 @@ Please follow the steps below to correctly set up the working environment for re
   Please ensure all environment variables and simulator dependencies are properly configured as described in each simulator's official documentation.
 
 ### ◼️ Reproduce the results in Workload1 (Global Search in NATS Benchmark)
+> This work supports diverse workload inputs. Please refer to the following section for parameter redefinitions to adapt the implementation to your local execution environment:
+```python
+# run_sss.py
+  # * Line 5
+    acc_code_path = "your-path-to/COFleX/COFleX_Analysis/RBFleX/imageNet_SSS"
+  
+  # * Line 108 ~ 113
+    for N_HYPER in [10]: # 5,10,30
+      for ACQU in ["Coflex","qNParEGO","qNEHVI","qEHVI","random,"nsga", "pabo"]: # "Coflex","qNParEGO","qNEHVI","qEHVI","random,"nsga", "pabo" 
+          for ITERS in [30]: # 5, 15, 30, 45
+              for N_INIT in [100]: # 10,50,100,300
+                  for BS in [10]: # 1,4,10
+                      for H_ARCH in ["DeFiNES"]: # "ScaleSim", "DeFiNES"
+  
+  # * Line 182 & 183
+    parser.add_argument('-ih','--IN-H', default='your-image-H_szie', type=int, help='Height of input image for faster RCNN (default: 224)') # 224, 32
+    parser.add_argument('-iw','--IN-W', default='your-image-W_szie', type=int, help='Width of input image for faster RCNN (default: 224)') # 224, 32
+
+# Simulator/FRCN_Simulator.py
+  # * Line 113
+    benchmark_root="your-path-to/COFleX/NATS-sss-v1_0-50262-simple",
+  # * Line 144
+    img_root="your-path-to/COFleX/COFleX/dataset"
+# COFleX_Analysis/RBFleX/imageNet_SSS/Check_acc.py
+  # * Line 16
+    api_loc = 'your-path-to/COFleX/NATS-sss-v1_0-50262-simple'
+  # * Line 20
+    accuracy, latency, time_cost, current_total_time_cost = searchspace.simulate_train_eval(uid, dataset='select-dataset-as-you-want!', hp='90') # "cifar10", "cifar100" "ImageNet16-120"
+```
+
+> To reproduce the Figs/Tabs results, simply start with `run_sss.py`
 ```python
 # Global Search in NATS Benchmark
 # Supported Datasets: CIFAR10, CFIAR100, ImageNet
 # Executed task: Image Classification
 python run_sss.py
+```
 
+> Output Results Storage Location & Figs Reproduce
+```python
+# Comming Soon!
 ```
 
 
