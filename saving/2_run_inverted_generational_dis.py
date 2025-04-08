@@ -35,27 +35,27 @@ def log_transform(data):
 
 algo_files = {
     "qnehvi": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/qnehvi/DeFiNES_SSS_os_ALGO_qNEHVI_TIME__02_13_15_55_imagenet_/train_output.csv", 
+        "your-path-to/Saving/qnehvi/DeFiNES_SSS_os_ALGO_qNEHVI_TIME__02_13_15_55_imagenet_/train_output.csv", 
         "green"
     ),
     "coflex": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/coflex_gen_2/DeFiNES_SSS_os_ALGO_Coflex_TIME__02_07_13_31_imagenet_/train_output.csv", 
+        "your-path-to/Saving/coflex_gen_2/DeFiNES_SSS_os_ALGO_Coflex_TIME__02_07_13_31_imagenet_/train_output.csv", 
         "blue"
     ),
     "qehvi": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/qehvi/DeFiNES_SSS_os_ALGO_qEHVI_TIME__02_15_09_54_imagenet_/train_output.csv", 
+        "your-path-to/Saving/qehvi/DeFiNES_SSS_os_ALGO_qEHVI_TIME__02_15_09_54_imagenet_/train_output.csv", 
         "orange"
     ),
     "qnpargeo": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/qnpargeo/DeFiNES_SSS_os_ALGO_qNParEGO_TIME__02_09_20_01_imagenet_/train_output.csv", 
+        "your-path-to/Saving/qnpargeo/DeFiNES_SSS_os_ALGO_qNParEGO_TIME__02_09_20_01_imagenet_/train_output.csv", 
         "red"
     ),
     "pabo": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/pabo/DeFiNES_SSS_os_ALGO_pabo_TIME__03_03_10_25_imagenet_/train_output.csv", 
+        "your-path-to/Saving/pabo/DeFiNES_SSS_os_ALGO_pabo_TIME__03_03_10_25_imagenet_/train_output.csv", 
         "gray"
     ),
     "random": (
-        "D:/OneDrive - Singapore University of Technology and Design/Saving/random/DeFiNES_SSS_os_ALGO_random_TIME__02_16_01_17_imagenet_/train_output.csv", 
+        "your-path-to/Saving/random/DeFiNES_SSS_os_ALGO_random_TIME__02_16_01_17_imagenet_/train_output.csv", 
         "gray"
     ),
 }
