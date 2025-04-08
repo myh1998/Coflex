@@ -142,7 +142,6 @@ Please follow the steps below to correctly set up the working environment for re
 # Global Search in NATS Benchmark
 # Supported Datasets: CIFAR10, CFIAR100, ImageNet
 # Executed task: Image Classification
->
 python run_sss.py
 
 ```
