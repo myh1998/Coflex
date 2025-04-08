@@ -19,7 +19,7 @@
 
 ## 🟨 Introduction
 ### ◼️ Coflex optimizer framework
-Coflex is a hardware-aware neural architecture search (HW-NAS) optimizer that jointly considers key parameters from the software-side neural network architecture and corresponding hardware design configurations. It operates through an iterative co-optimization framework consisting of a multi-objective Bayesian optimizer (front-end) and a performance evaluator (back-end).
+`Coflex` is a hardware-aware neural architecture search (HW-NAS) optimizer that jointly considers key parameters from the software-side neural network architecture and corresponding hardware design configurations. It operates through an iterative co-optimization framework consisting of a multi-objective Bayesian optimizer (front-end) and a performance evaluator (back-end).
 
 In each optimization iteration, Coflex takes candidate configurations as input, evaluates their actual performance trade-offs between software accuracy (e.g., error rate) and hardware efficiency (e.g., energy-delay product), and updates the surrogate models in the Bayesian optimizer accordingly. This process enables Coflex to progressively refine the Pareto front toward a designated reference point (e.g., (0,0)) in the objective space, effectively navigating the inherent conflict between software and hardware objectives.
 
@@ -28,14 +28,14 @@ After multiple iterations, Coflex converges to a near-globally optimal Pareto fr
 <p align="center"><img width=100% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_hw_framework_overview.png"></p>
 
 ### ◼️ Search Space Define
-The search space of HW-NAS encompasses a high-dimensional hyperparameter space composed of both software-wise parameters (e.g., neural network architectural choices) and hardware-wise parameters (e.g., hardware resource configurations). To initialize the optimization process, Coflex performs uniform sampling across all dimensions of this joint search space. These sampled configurations are then used to construct the initial Gaussian surrogate models within the multi-objective Bayesian optimization front-end.
+The `search space` of HW-NAS encompasses a high-dimensional hyperparameter space composed of both software-wise parameters (e.g., neural network architectural choices) and hardware-wise parameters (e.g., hardware resource configurations). To initialize the optimization process, Coflex performs uniform sampling across all dimensions of this joint search space. These sampled configurations are then used to construct the initial Gaussian surrogate models within the multi-objective Bayesian optimization front-end.
 
 <p align="center"><img width=30% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_search_space.png"></p>
 
 ### ◼️ Total Hyper-parameters for different NAS-Benchmark suites
 This work leverages multiple standardized NAS benchmark suites to provide consistent neural architecture input representations for the Coflex optimizer. These benchmarks serve as the input source for both software and hardware configuration spaces.
 
-If you wish to run Coflex on a specific NAS benchmark, please refer to the table below for the corresponding repository links. Make sure to download and store the datasets according to the instructions provided in the [How to Run](https://github.com/myh1998/Coflex/blob/main/README.md#-how-to-run) section.
+If you wish to run Coflex on a specific NAS benchmark, please refer to the table below for the corresponding repository links. Make sure to download and store the datasets according to the instructions provided in the [`How to Run`](https://github.com/myh1998/Coflex/blob/main/README.md#-how-to-run) section.
 
 Coflex is designed with high extensibility, supporting diverse NAS benchmarks across various tasks. If you intend to apply Coflex to a new benchmark not covered in this work, you may edit the internal data mapping logic in the Software Performance Evaluator and Hardware Performance Evaluator (DeFiNES) modules to ensure compatibility with the new input/output format.
 
@@ -52,7 +52,7 @@ Coflex is designed with high extensibility, supporting diverse NAS benchmarks ac
 
 
 ### ◼️ Dimension Decomposition
-Coflex tackles the scalability bottlenecks in hardware-aware NAS by introducing a two-level sparse Gaussian process (SGP) framework:
+Coflex tackles the scalability bottlenecks in hardware-aware NAS by introducing a `two-level sparse Gaussian process (SGP)` framework:
 
 🔹 Per-objective SGPs reduce complexity by modeling each optimization objective separately.
 
@@ -67,15 +67,15 @@ To handle the scalability bottlenecks of standard Gaussian Processes in large-sc
 
 ## 🟨 Repository File Structure
 ### ◼️ Multiple Bayesian Optimizer(Front-end)
-🔹Download Link: [FRCN_Simulator](https://github.com/myh1998/Coflex/blob/main/Simulator/FRCN_Simulator.py)
+🔹Download Link: [`FRCN_Simulator`](https://github.com/myh1998/Coflex/blob/main/Simulator/FRCN_Simulator.py)
 
 ### ◼️ Performance Evaluator(Back-end)
 #### 🧠 Network Evaluator
-🔹Download Link: [RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
+🔹Download Link: [`RBFleX-NAS`](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
 
 #### ⚙️ Hardware Evaluator
 
-This project supports two types of hardware deployment evaluators: DeFiNES and Scale-Sim, each offering distinct trade-offs between evaluation speed and accuracy:
+This project supports two types of hardware deployment evaluators: `DeFiNES` and `Scale-Sim`, each offering distinct trade-offs between evaluation speed and accuracy:
 ```bash
 # Scale-Sim is employed as a fast yet lower-accuracy evaluator.
 # Average evaluation time: 3–5 seconds per query
@@ -92,9 +92,9 @@ This project supports two types of hardware deployment evaluators: DeFiNES and S
 ```
 Please download the hardware deployment evaluator from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
 
-🔹Download Link: [DeFiNES](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
+🔹Download Link: [`DeFiNES`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
 
-🔹Download Link: [Scale-Sim](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EtNUdprB7QVEvcZk54zrEXMBN0tAR-iSGE1J-f0utFUxVw?e=GsgJ7s)
+🔹Download Link: [`Scale-Sim`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EtNUdprB7QVEvcZk54zrEXMBN0tAR-iSGE1J-f0utFUxVw?e=GsgJ7s)
 
 ## 🟨 Installation Requirements
 ```bash
@@ -122,7 +122,7 @@ Please follow the steps below to correctly set up the working environment for re
 🔹Download & Unzip NAS-Benchmark
   > The Coflex framework supports multiple NAS benchmarks. Please use the corresponding download links as needed.
   
-  > For NATS-Bench-SSS, Download Link: [NATS-sss-v1_0-50262-simple](https://onedrive.live.com/?authkey=%21AKSvuIkSXx0UQaI&id=8305A36BB9DB1CA9%21127&cid=8305A36BB9DB1CA9)
+  > For NATS-Bench-SSS, Download Link: [`NATS-sss-v1_0-50262-simple`](https://onedrive.live.com/?authkey=%21AKSvuIkSXx0UQaI&id=8305A36BB9DB1CA9%21127&cid=8305A36BB9DB1CA9)
   ```bash
   unzip NATS-sss-v1_0-50262-simple.zip -d COFleX/
   ```
@@ -187,7 +187,7 @@ python run_sss.py
 
 > Output Results Storage Location & Figs Reproduce
 > When the program completes execution successfully, the results will be stored under `COFleX\COFleX_result\`, which will include:
-```python
+```bash
 # train_input.py, representing the final software and hardware parameters generated through the HW-NAS
 # optimization process  
 
@@ -207,7 +207,7 @@ python run_sss.py
 > To easily reproduce the figures presented in the paper, you may optionally download from[`Results Saving`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EmZNWvydDENCv9hQXs6U4aMBsfzEkL_HztQJUX91KgTadw?e=yeS7QL)
 
 > The [`saving`](https://github.com/myh1998/Coflex/tree/main/saving) folder contains five figure plotting scripts:
-```python
+```bash
 # 1_run_ploting_pareto_fronts.py, used to plot the Pareto front formed by multi-objective optimization,
 illustrating the trade-off relationships  
 
