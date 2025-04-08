@@ -1,7 +1,21 @@
 # Coflex: Enhancing HW-NAS with Sparse Gaussian Processes for Efficient and Scalable Software-Hardware Co-Design
 
 ## 🟨 Contents
-xxx_xxx
+- [Introduction](https://github.com/myh1998/Coflex#-introduction)
+  - [Coflex Optimizer Framework](https://github.com/myh1998/Coflex#%EF%B8%8F-coflex-optimizer-framework)
+  - [Search Space Define](https://github.com/myh1998/Coflex#%EF%B8%8F-search-space-define)
+  - [Total Hyper-Parameters For Different NAS Benchmark Suites](https://github.com/myh1998/Coflex#%EF%B8%8F-total-hyper-parameters-for-different-nas-benchmark-suites)
+  - [Dimension Decomposition](https://github.com/myh1998/Coflex#%EF%B8%8F-dimension-decomposition)
+  - [Sparse Gaussian Inducing Strategies](https://github.com/myh1998/Coflex#%EF%B8%8F-sparse-gaussian-inducing-strategies)
+- [Repository File Structure](https://github.com/myh1998/Coflex#-repository-file-structure)
+  - [Multiple Bayesian Optimizer](https://github.com/myh1998/Coflex#%EF%B8%8F-multiple-bayesian-optimizerfront-end)
+  - [Performance Evaluator](https://github.com/myh1998/Coflex#%EF%B8%8F-performance-evaluatorback-end)
+    - [Network Evaluator - RBFleX-NAS](https://github.com/myh1998/Coflex#-network-evaluator)
+    - [Hardware Evaluator - DeFiNES & Scale-Sim](https://github.com/myh1998/Coflex#%EF%B8%8F-hardware-evaluator)
+- [Installation Requirements](https://github.com/myh1998/Coflex#-installation-requirements)
+- [How To Run](https://github.com/myh1998/Coflex#-how-to-run)
+  - [Preprocessing For Reproduction](https://github.com/myh1998/Coflex#%EF%B8%8F-preprocessing-for-reproduction)
+  - [Reproduce The Results In Workload1](https://github.com/myh1998/Coflex#%EF%B8%8F-reproduce-the-results-in-workload1)  
 
 ## 🟨 Introduction
 ### ◼️ Coflex optimizer framework
