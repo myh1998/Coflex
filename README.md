@@ -67,21 +67,37 @@ To handle the scalability bottlenecks of standard Gaussian Processes in large-sc
 
 ## 🟨 Repository File Structure
 ### ◼️ Multiple Bayesian Optimizer(Front-end)
-🔹 [FRCN_Simulator](https://github.com/myh1998/Coflex/blob/main/Simulator/FRCN_Simulator.py)
+🔹Download Link: [FRCN_Simulator](https://github.com/myh1998/Coflex/blob/main/Simulator/FRCN_Simulator.py)
 
 ### ◼️ Performance Evaluator(Back-end)
 #### 🧠 Network Evaluator
-🔹[RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
+🔹Download Link: [RBFleX-NAS](https://github.com/myh1998/Coflex/blob/main/Simulator/RBFleX.py)
 
 #### ⚙️ Hardware Evaluator
-Please download the hardware deployment analyzer from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
 
-🔹[DeFiNES](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
+This project supports two types of hardware deployment evaluators: DeFiNES and Scale-Sim, each offering distinct trade-offs between evaluation speed and accuracy:
+```bash
+# Scale-Sim is employed as a fast yet lower-accuracy evaluator.
+# Average evaluation time: 3–5 seconds per query
+# Output: Estimated cycle count
+# Use case: Suitable for quick, large-scale architecture assessments during the early-stage search or pruning processes.
 
-🔹[Scale-Sim](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EtNUdprB7QVEvcZk54zrEXMBN0tAR-iSGE1J-f0utFUxVw?e=GsgJ7s)
+# DeFiNES serves as a high-accuracy, hardware-faithful evaluator, albeit with slower evaluation speed.
+# Average evaluation time: ~200 seconds per query
+# Accuracy:
+#  Average latency prediction error: ~3%
+#  Worst-case latency error (e.g., FSRCNN): up to 10%
+#  Energy prediction error: within 6%
+# Use case: Ideal for precise, end-stage performance estimation and final candidate ranking.
+```
+Please download the hardware deployment evaluator from the following link and follow the instructions in [Preprocessing for Reproduction](https://github.com/myh1998/Coflex/blob/main/README.md#preprocessing-for-reproduction) section to correctly install it for reproducing the results presented in the paper.
+
+🔹Download Link: [DeFiNES](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EhqUH-LOmt5PmVbKjIocAUUBLzoJ0s_6Y2oSfbvpmvkh1g?e=uM1249)
+
+🔹Download Link: [Scale-Sim](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EtNUdprB7QVEvcZk54zrEXMBN0tAR-iSGE1J-f0utFUxVw?e=GsgJ7s)
 
 ## 🟨 Installation Requirements
-```python
+```bash
 pip install -r requirements.txt
 ```
 [Requirements](https://github.com/myh1998/Coflex/blob/main/requirements.txt)
@@ -92,26 +108,32 @@ Please follow the steps below to correctly set up the working environment for re
 
 🔹Set the Working Directory
   Choose 
-  ```python
-  COFleX/
+  ```bash
+  cd COFleX/
   ```
   as the root working directory.
 
 🔹Unpack Required Archives
-  ```python
+  ```bash
   unzip COFleX_Analysis.zip -d COFleX/
-
   unzip design_space.zip -d COFleX/
   ```
 🔹Prepare Dataset
-  Download the ImageNet val dataset and place it into the following directory:
-  ```python
-  COFleX/dataset/
+  Download the ImageNet/val dataset and place it into the following directory:
+  > The CIFAR-10 and CIFAR-100 datasets will be **automatically downloaded** by the program into `COFleX/dataset/`.  
+  > The **ImageNet/val** subset must be **manually downloaded** or obtained via the command line if a valid URL is available:
+  >
+  ```bash
+   wget "https://your-server.com/path-to/imagenet_val.zip" -O imagenet_val.zip
+   mkdir -p COFleX/dataset/
+   unzip imagenet_val.zip -d COFleX/dataset/val/
   ```
+
 🔹Install Required Simulators
   Download and place the DeFiNES & Scale-Sim into the specified directory:
-  ```python
-  COFleX/Simulator/
+  ```bash
+  unzip DeFiNES.zip -d COFleX/Simulator/
+  unzip ScaleSim.zip -d COFleX/Simulator/
   ```
   Please ensure all environment variables and simulator dependencies are properly configured as described in each simulator's official documentation.
 
@@ -120,6 +142,7 @@ Please follow the steps below to correctly set up the working environment for re
 # Global Search in NATS Benchmark
 # Supported Datasets: CIFAR10, CFIAR100, ImageNet
 # Executed task: Image Classification
+>
 python run_sss.py
 
 ```
