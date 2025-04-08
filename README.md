@@ -188,30 +188,53 @@ python run_sss.py
 > Output Results Storage Location & Figs Reproduce
 > When the program completes execution successfully, the results will be stored under COFleX\COFleX_result\, which will include:
 ```python
-# train_input.py, representing the final software and hardware parameters generated through the HW-NAS optimization process  
-# train_output.py, representing the results obtained in each objective dimension during multi-objective optimization, which form the Pareto front  
-# hv.py, containing the Dominated Hypervolume progression of all solution sets searched by each HW-NAS method in every iteration  
-# opt_vs_time_analys.py, recording the solutions retained by each HW-NAS method during each iteration, demonstrating the optimization efficiency and convergence ability over time  
-# opt_efficiency_analys, recording the maximized software performance and minimized hardware consumption achieved in each dimension during iterative optimization  
+# train_input.py, representing the final software and hardware parameters generated through the HW-NAS
+# optimization process  
+
+# train_output.py, representing the results obtained in each objective dimension during multi-objective
+# optimization, which form the Pareto front  
+
+# hv.py, containing the Dominated Hypervolume progression of all solution sets searched by each HW-NAS
+# method in every iteration  
+
+# opt_vs_time_analys.py, recording the solutions retained by each HW-NAS method during each iteration,
+# demonstrating the optimization efficiency and convergence ability over time  
+
+# opt_efficiency_analys, recording the maximized software performance and minimized hardware consumption
+#achieved in each dimension during iterative optimization  
 ```
 
 > To easily reproduce the figures presented in the paper, you may optionally download from[`Results Saving`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EmZNWvydDENCv9hQXs6U4aMBsfzEkL_HztQJUX91KgTadw?e=yeS7QL)
 
 > The [`saving`](https://github.com/myh1998/Coflex/tree/main/saving) folder contains five figure plotting scripts:
 ```python
-# 1_run_ploting_pareto_fronts.py, used to plot the Pareto front formed by multi-objective optimization, illustrating the trade-off relationships  
-python 1_run_ploting_pareto_fronts.py  
+# 1_run_ploting_pareto_fronts.py, used to plot the Pareto front formed by multi-objective optimization,
+illustrating the trade-off relationships  
 
-# 2_run_inverted_generational_dis.py, used to show the Pareto front closest to the reference point (0, 0). The hyper-space enclosed by this front and the reference point is called the Pareto Optimal Region, demonstrating the algorithm’s contraction and advancement capability. The smaller the value, the better the final optimized solution set  
-python 2_run_inverted_generational_dis.py  
+# 2_run_inverted_generational_dis.py, used to show the Pareto front closest to the reference point (0, 0).
+The hyper-space enclosed by this front and the reference point is called the Pareto Optimal Region,
+demonstrating the algorithm’s contraction and advancement capability. The smaller the value, the better
+the final optimized solution set   
 
-# 3_run_hypervolume.py, used to show the Dominated Hypervolume of all solution sets searched by the HW-NAS algorithm over multiple iterations, reflecting the algorithm’s exploration ability in the search space. A larger value indicates a more comprehensive exploration, avoiding local optima  
-python 3_run_hypervolume.py  
+# 3_run_hypervolume.py, used to show the Dominated Hypervolume of all solution sets searched by the HW-NAS
+algorithm over multiple iterations, reflecting the algorithm’s exploration ability in the search space.
+A larger value indicates a more comprehensive exploration, avoiding local optima  
 
-# 4_run_opt_efficiency_analysis.py, records the solutions retained by each HW-NAS method during each iteration, demonstrating optimization efficiency and convergence ability across iterations  
-python 4_run_opt_efficiency_analysis.py  
+# 4_run_opt_efficiency_analysis.py, records the solutions retained by each HW-NAS method during
+each iteration, demonstrating optimization efficiency and convergence ability across iterations  
 
-# 5_run_opt_vs_time_analysis.py, records the maximized software performance and minimized hardware consumption achieved in each dimension during iterative optimization  
+# 5_run_opt_vs_time_analysis.py, records the maximized software performance and minimized hardware
+consumption achieved in each dimension during iterative optimization  
+```
+> Please refer to the following section for `path` redefinitions to adapt the implementation to
+> your local execution environment, then you can run:
+```python
+python 1_run_ploting_pareto_fronts.py
+python 2_run_inverted_generational_dis.py
+python 3_run_hypervolume.py
+python 4_run_opt_efficiency_analysis.py
 python 5_run_opt_vs_time_analysis.py 
 ```
+
+> 如果您希望重新训练所有HW-NAS算法在不同workload上的
 
