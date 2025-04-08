@@ -186,7 +186,7 @@ python run_sss.py
 ```
 
 > Output Results Storage Location & Figs Reproduce
-> When the program completes execution successfully, the results will be stored under COFleX\COFleX_result\, which will include:
+> When the program completes execution successfully, the results will be stored under `COFleX\COFleX_result\`, which will include:
 ```python
 # train_input.py, representing the final software and hardware parameters generated through the HW-NAS
 # optimization process  
@@ -236,5 +236,5 @@ python 4_run_opt_efficiency_analysis.py
 python 5_run_opt_vs_time_analysis.py 
 ```
 
-> 如果您希望重新训练所有HW-NAS算法在不同workload上的
+> If you wish to retrain all HW-NAS algorithms on different workloads, please copy the result package from `COFleX\COFleX_result\` into the `Results Saving` directory, and update the `path` configs in all scripts under the `saving` folder to match your local deployment environment.
 
