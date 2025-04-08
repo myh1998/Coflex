@@ -11,15 +11,15 @@ def main():
         file_path = ""
         df = None
         if algo == "qnehvi":
-            file_path = 'D:/OneDrive - Singapore University of Technology and Design/Saving/qnehvi/DeFiNES_SSS_os_ALGO_qNEHVI_TIME__02_13_15_55_imagenet_/opt_efficiency_analys.csv'
+            file_path = 'your-path-to/Saving/qnehvi/DeFiNES_SSS_os_ALGO_qNEHVI_TIME__02_13_15_55_imagenet_/opt_efficiency_analys.csv'
         elif algo == "qnpargeo":
-            file_path = 'D:/OneDrive - Singapore University of Technology and Design/Saving/qnpargeo/DeFiNES_SSS_os_ALGO_qNParEGO_TIME__02_09_20_01_imagenet_/opt_efficiency_analys.csv'
+            file_path = 'your-path-to/Saving/qnpargeo/DeFiNES_SSS_os_ALGO_qNParEGO_TIME__02_09_20_01_imagenet_/opt_efficiency_analys.csv'
         elif algo == "coflex":
-            file_path = 'D:/OneDrive - Singapore University of Technology and Design/Saving/coflex_gen_2/DeFiNES_SSS_os_ALGO_Coflex_TIME__02_07_13_31_imagenet_/opt_efficiency_analys.csv'
+            file_path = 'your-path-to/Saving/coflex_gen_2/DeFiNES_SSS_os_ALGO_Coflex_TIME__02_07_13_31_imagenet_/opt_efficiency_analys.csv'
         elif algo == "qehvi":
-            file_path = 'D:/OneDrive - Singapore University of Technology and Design/Saving/qehvi/DeFiNES_SSS_os_ALGO_qEHVI_TIME__02_15_09_54_imagenet_/opt_efficiency_analys.csv'
+            file_path = 'your-path-to/Saving/qehvi/DeFiNES_SSS_os_ALGO_qEHVI_TIME__02_15_09_54_imagenet_/opt_efficiency_analys.csv'
         elif algo == "random":
-            file_path = 'D:/OneDrive - Singapore University of Technology and Design/Saving/random/DeFiNES_SSS_os_ALGO_random_TIME__02_16_01_17_imagenet_/opt_efficiency_analys.csv'
+            file_path = 'your-path-to/Saving/random/DeFiNES_SSS_os_ALGO_random_TIME__02_16_01_17_imagenet_/opt_efficiency_analys.csv'
         if file_path:
             df = pd.read_csv(file_path, header=None)
         if df is None:
