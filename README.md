@@ -100,7 +100,7 @@ Please download the hardware deployment evaluator from the following link and fo
 ```bash
 pip install -r requirements.txt
 ```
-[Requirements](https://github.com/myh1998/Coflex/blob/main/requirements.txt)
+[`Requirements`](https://github.com/myh1998/Coflex/blob/main/requirements.txt)
 
 ## 🟨 How to Run
 ### ◼️ Preprocessing for Reproduction
