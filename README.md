@@ -115,9 +115,13 @@ Please follow the steps below to correctly set up the working environment for re
   ```
   Please ensure all environment variables and simulator dependencies are properly configured as described in each simulator's official documentation.
 
-### ◼️ Reproduce the results in Workload1
+### ◼️ Reproduce the results in Workload1 (Global Search in NATS Benchmark)
 ```python
+# Global Search in NATS Benchmark
+# Supported Datasets: CIFAR10, CFIAR100, ImageNet
+# Executed task: Image Classification
 python run_sss.py
+
 ```
 
 
