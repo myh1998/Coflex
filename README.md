@@ -233,37 +233,37 @@ python 1_run_ploting_pareto_fronts.py
 ```
 > To reproduce the results presented in Figure 4(a) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(a).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(a).png"></p>
 
 ```python
 python 2_run_inverted_generational_dis.py
 ```
 > To reproduce the results presented in Figure 4(b) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(b).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(b).png"></p>
 
 ```python
 python 3_run_hypervolume.py
 ```
 > To reproduce the results presented in Figure 4(c) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(c).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(c).png"></p>
 
 ```python
 python 4_run_opt_efficiency_analysis.py
 ```
 > To reproduce the results presented in Figure 4(d)&(e) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d).png"></p>
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(e).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(e).png"></p>
 
 ```python
 python 5_run_opt_vs_time_analysis.py 
 ```
 > To reproduce the results presented in Figure 4(f) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(f).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(f).png"></p>
 
 > If you wish to retrain all HW-NAS algorithms on different workloads, please copy the result package from `COFleX\COFleX_result\` into the `Results Saving` directory, and update the `path` configs in all scripts under the `saving` folder to match your local deployment environment.
 
