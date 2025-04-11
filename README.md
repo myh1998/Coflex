@@ -252,11 +252,9 @@ python 3_run_hypervolume.py
 ```python
 python 4_run_opt_efficiency_analysis.py
 ```
-> To reproduce the results presented in Figure 4(d)&(e) of the paper. The expected output is illustrated as follow.
+> To reproduce the results presented in Figure 4(d)&(e)&(f) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d).png"></p>
-
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(e).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d)&(e)&(f).png"></p>
 
 ```python
 python 5_run_opt_vs_time_analysis.py 
