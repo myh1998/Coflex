@@ -254,14 +254,14 @@ python 4_run_opt_efficiency_analysis.py
 ```
 > To reproduce the results presented in Figure 4(d)&(e)&(f) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=90% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d)&(e)&(f).png"></p>
+<p align="center"><img width=85% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(d)&(e)&(f).png"></p>
 
 ```python
 python 5_run_opt_vs_time_analysis.py 
 ```
 > To reproduce the results presented in Figure 4(f) of the paper. The expected output is illustrated as follow. For coflex, its optimization process demonstrates better stability, maintaining a lower Err vs EDP relationship in both the early and later stages, with a clear convergence appearing within the limited number of iterations, indicating that coflex may possess global optimal search capabilities. Compared to other methods, coflex has a better optimization advantage.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_opt_time_analysis.png"></p>
+<p align="center"><img width=90% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_opt_time_analysis.png"></p>
 
 > If you wish to retrain all HW-NAS algorithms on different workloads, please copy the result package from `COFleX\COFleX_result\` into the `Results Saving` directory, and update the `path` configs in all scripts under the `saving` folder to match your local deployment environment.
 
