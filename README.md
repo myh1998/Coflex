@@ -25,12 +25,12 @@ In each optimization iteration, Coflex takes candidate configurations as input, 
 
 After multiple iterations, Coflex converges to a near-globally optimal Pareto front, where each point represents a non-dominated configuration offering an optimal trade-off between software performance and hardware cost. The final output provides interpretable architectural design recommendations for both neural network developers and hardware architects, along with the expected performance metrics of each configuration. As a result, Coflex delivers an automated, end-to-end software-hardware co-design pipeline.
 
-<p align="center"><img width=100% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_hw_framework_overview.png"></p>
+<p align="center"><img width=70% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_hw_framework_overview_v2_page-0001.jpg""></p>
 
 ### ◼️ Search Space Define
 The `search space` of HW-NAS encompasses a high-dimensional hyperparameter space composed of both software-wise parameters (e.g., neural network architectural choices) and hardware-wise parameters (e.g., hardware resource configurations). To initialize the optimization process, Coflex performs uniform sampling across all dimensions of this joint search space. These sampled configurations are then used to construct the initial Gaussian surrogate models within the multi-objective Bayesian optimization front-end.
 
-<p align="center"><img width=30% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_search_space.png"></p>
+<p align="center"><img width=40% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_design_space_of_nas_sss_page-0001.jpg""></p>
 
 ### ◼️ Total Hyper-parameters for different NAS-Benchmark suites
 This work leverages multiple standardized NAS benchmark suites to provide consistent neural architecture input representations for the Coflex optimizer. These benchmarks serve as the input source for both software and hardware configuration spaces.
@@ -60,7 +60,7 @@ Coflex tackles the scalability bottlenecks in hardware-aware NAS by introducing 
 
 This design enables Coflex to efficiently explore massive software-hardware search spaces (10¹⁹+ configs) while maintaining high-fidelity trade-off modeling.
 
-<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_dimension_decomposation.png"></p>
+<p align="center"><img width=80% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_dimension_decomposation_page-0001.jpg"></p>
 
 ### ◼️ Sparse Gaussian inducing strategies
 To handle the scalability bottlenecks of standard Gaussian Processes in large-scale HW-NAS tasks, Coflex adopts sparse GP modeling with inducing points. Instead of maintaining a full covariance matrix, Coflex approximates it using a low-rank structure derived from a small set of representative inducing inputs. This significantly reduces computational cost and improves stability, enabling fast and reliable optimization over high-dimensional software-hardware design spaces.
@@ -233,21 +233,21 @@ python 1_run_ploting_pareto_fronts.py
 ```
 > To reproduce the results presented in Figure 4(a) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(a).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_pareto_fronts_page-0001.jpg"></p>
 
 ```python
 python 2_run_inverted_generational_dis.py
 ```
 > To reproduce the results presented in Figure 4(b) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(b).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_pareto_region_page-0001.jpg"></p>
 
 ```python
 python 3_run_hypervolume.py
 ```
 > To reproduce the results presented in Figure 4(c) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Fig_4(c).png"></p>
+<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_hv_page-0001.jpg"></p>
 
 ```python
 python 4_run_opt_efficiency_analysis.py
