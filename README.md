@@ -254,7 +254,7 @@ python 4_run_opt_efficiency_analysis.py
 ```
 > To reproduce the results presented in Figure 4(d)&(e)&(f) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=95% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/comb-figs.jpg"></p>
+<p align="center"><img width=95% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/comb-figs.png"></p>
 
 ```python
 python 5_run_opt_vs_time_analysis.py 
