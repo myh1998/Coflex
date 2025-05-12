@@ -204,7 +204,7 @@ python run_sss.py
 #achieved in each dimension during iterative optimization  
 ```
 
-> To easily reproduce the figures presented in the paper, you may optionally download from[`Results Saving`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EmZNWvydDENCv9hQXs6U4aMBsfzEkL_HztQJUX91KgTadw?e=yeS7QL)
+> To easily reproduce the figures presented in the paper, you may optionally download from [`Results Saving`](https://sutdapac-my.sharepoint.com/:f:/g/personal/yinhui_ma_mymail_sutd_edu_sg/EmZNWvydDENCv9hQXs6U4aMBsfzEkL_HztQJUX91KgTadw?e=yeS7QL)
 
 > The [`saving`](https://github.com/myh1998/Coflex/tree/main/saving) folder contains five figure plotting scripts:
 ```bash
