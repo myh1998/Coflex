@@ -233,7 +233,7 @@ python 1_run_ploting_pareto_fronts.py
 ```
 > To reproduce the results presented in Figure 4(a) of the paper. The expected output is illustrated as follow.
 
-<p align="center"><img width=50% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_pareto_fronts_page-0001.jpg"></p>
+<p align="center"><img width=60% src="https://github.com/myh1998/Coflex/blob/main/Figs/Move/Fig_pareto_fronts_page-0001.jpg"></p>
 
 ```python
 python 2_run_inverted_generational_dis.py
